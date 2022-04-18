@@ -53,4 +53,15 @@ public class GameService {
         }
     }
 
+    public boolean checkContinueGame(String inputValue) {
+        if (inputValue.equals(GameOptionConstants.OPTION_CONTINUE_TEXT)) {
+            return true;
+        }
+        if (inputValue.equals(GameOptionConstants.OPTION_FINISH_TEXT)) {
+            return false;
+        }
+
+        throw new IllegalArgumentException("Unexpected continue inputValue.");
+    }
+
 }
